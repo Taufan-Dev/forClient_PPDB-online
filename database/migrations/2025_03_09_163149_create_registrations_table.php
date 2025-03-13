@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('registration_path', ['reguler', 'afirmasi']);
-            $table->enum('status', ['menunggu', 'terdaftar', 'ditolak']);
+            $table->enum('status', ['menunggu', 'diterima', 'ditolak'])->default('menunggu');
             $table->timestamps();
         });
     }
