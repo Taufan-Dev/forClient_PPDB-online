@@ -130,6 +130,20 @@ class StudentResource extends Resource
                             ->label('Jarak Rumah ke Sekolah')
                             ->suffix('KM')
                     ]),
+                Forms\Components\Section::make('Pilihan Jalur')
+                    ->relationship('registration')
+                    ->description('Pilihan jalur pendaftaran siswa.')
+                    ->icon('heroicon-o-academic-cap')
+                    ->collapsible()
+                    ->schema([
+                        Forms\Components\Select::make('registration_path')
+                            ->label('Jalur Pendaftaran')
+                            ->options([
+                                'reguler' => 'Reguler',
+                                'afirmasi' => 'Afirmasi',
+                            ])
+                            ->required(),
+                    ]),
             ]);
     }
 
