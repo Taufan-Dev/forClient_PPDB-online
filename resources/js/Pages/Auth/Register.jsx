@@ -86,19 +86,21 @@ export default function Register() {
 
                         {/* Input NISN */}
                         <div className="mt-4">
-                            <InputLabel
-                                htmlFor="nisn"
-                                value="NISN"
-                                className="text-lg font-semibold"
-                            />
-                            <a
-                                href="https://nisn.data.kemdikbud.go.id"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-500"
-                            >
-                                Cek NISN disini
-                            </a>
+                            <div className="flex justify-between items-center">
+                                <InputLabel
+                                    htmlFor="nisn"
+                                    value="NISN"
+                                    className="text-lg font-semibold"
+                                />
+                                <a
+                                    href="https://nisn.data.kemdikbud.go.id"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-500 text-sm italic"
+                                >
+                                    Cek NISN disini*
+                                </a>
+                            </div>
                             <TextInput
                                 id="nisn"
                                 name="nisn"

@@ -19,7 +19,7 @@ export default function PendaftaranJalurReguler() {
         <>
             <Head title="Pendaftaran Jalur Reguler" />
             <div className="min-h-screen md:flex items-center justify-center lg:px-20 p-6">
-                <div className="flexjustify-center md:mr-20">
+                <div className="flex justify-center md:mr-20">
                     <h1 className="text-3xl text-center font-bold ">
                         MTs LA TAHZAN
                     </h1>
@@ -111,12 +111,7 @@ export default function PendaftaranJalurReguler() {
                             ))}
                         </div>
                     </div>
-                    <button
-                        className="w-fit px-20 py-2 mx-auto flex md:items-center justify-center font-semibold border border-secondary bg-white text-secondary 
-               rounded-md text-base mt-6
-               transition-all duration-300 ease-in-out 
-               hover:bg-secondary hover:text-white hover:shadow-md"
-                    >
+                    <button className="w-fit px-20 py-2 mx-auto flex md:items-center justify-center font-semibold border border-secondary bg-white text-secondary rounded-md text-base mt-6 transition-all duration-300 ease-in-out hover:bg-secondary hover:text-white hover:shadow-md">
                         Daftar
                     </button>
                 </div>

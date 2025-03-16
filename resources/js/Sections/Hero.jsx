@@ -18,7 +18,10 @@ export default function Hero() {
                     MTs LA TAHZAN
                 </h2>
                 <div className="mt-8 flex items-center space-x-2">
-                    <IconMapPin className="mb-10 md:mb-6 text-white" size={30} />
+                    <IconMapPin
+                        className="mb-10 md:mb-6 text-white"
+                        size={30}
+                    />
                     <p className="text-base md:text-lg">
                         KP. NYOMPOK RT. 017/008 Carenang Kec.
                         <br />

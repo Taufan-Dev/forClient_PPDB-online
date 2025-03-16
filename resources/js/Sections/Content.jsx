@@ -1,8 +1,8 @@
-import ButtonComponent from "../../Components/Button";
+import ButtonComponent from "../Components/Button";
 
 export default function Content() {
     return (
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-4 py-16">
+        <div className="container mx-auto px-4 md:px-6 lg:px-4 py-16">
             <div className="flex flex-col-reverse md:flex-row items-center gap-8">
                 <div className="md:w-1/2 text-center md:text-left mt-4 md:mt-0">
                     <h2 className="text-3xl font-bold">MTs LA TAHZAN</h2>
@@ -74,7 +74,7 @@ export default function Content() {
                 </p>
             </div>
             <div className="grid md:grid-cols-[1fr_auto_1fr] gap-x-16 mt-8 items-center">
-                <div className="pb-4 md:pb-0 md:pr-12">
+                <div className="pb-4 md:pb-0 md:pr-12 flex flex-col items-end">
                     <h3 className="text-xl font-semibold text-center md:text-right">
                         Jalur Reguler
                     </h3>
@@ -116,6 +116,7 @@ export default function Content() {
                             variant="secondary"
                             size="lg"
                             color="white"
+                            link={"/pendaftaran-jalur-reguler"}
                         />
                     </div>
                 </div>
@@ -147,6 +148,7 @@ export default function Content() {
                             variant="secondary"
                             size="lg"
                             color="white"
+                            link={"/pendaftaran-jalur-afirmasi"}
                         />
                     </div>
                 </div>

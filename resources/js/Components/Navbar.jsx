@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <nav className="fixed w-full backdrop-blur-lg z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <img
@@ -61,12 +61,14 @@ export default function Navbar() {
                             variant="outline-secondary"
                             size="md"
                             color="secondary"
+                            link={"/login"}
                         />
                         <ButtonComponent
                             text="Register "
                             variant="outline-secondary"
                             size="md"
                             color="secondary"
+                            link={"/register"}
                         />
                     </div>
                     <button
@@ -77,6 +79,7 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
+
             <div
                 className={`fixed top-0 right-0 w-screen h-screen bg-white z-50 transform transition-transform duration-300 ${
                     sidebarOpen ? "translate-x-0" : "translate-x-full"
@@ -128,12 +131,14 @@ export default function Navbar() {
                         variant="outline-secondary"
                         size="md"
                         color="secondary"
+                        link={"/login"}
                     />
                     <ButtonComponent
                         text="Register "
                         variant="outline-secondary"
                         size="md"
                         color="secondary"
+                        link={"/register"}
                     />
                 </div>
             </div>

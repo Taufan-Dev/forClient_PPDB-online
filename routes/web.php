@@ -6,12 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return Inertia::render('Welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -23,11 +18,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/pendaftaran-jalur-reguler', function () {
-    return Inertia::render('pendaftaranJalurReguler');
+    return Inertia::render('PendaftaranJalurReguler');
 });
 
 Route::get('/pendaftaran-jalur-afirmasi', function () {
-    return Inertia::render('pendaftaranJalurAfirmasi');
+    return Inertia::render('PendaftaranJalurAfirmasi');
 });
 
 Route::middleware('auth')->group(function () {
@@ -36,4 +31,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

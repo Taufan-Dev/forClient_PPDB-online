@@ -19,18 +19,15 @@ export default function PendaftaranJalurAfirmasi() {
     return (
         <>
             <Head title="Pendaftaran Jalur Afirmasi" />
-            <div className="min-h-screen md:flex items-center justify-center lg:px-20 p-6">
-                <div className="items-center lg:mr-20">
-                    <h1 className="text-3xl text-center font-bold ">
-                        MTs LA TAHZAN
-                    </h1>
+            <div className="min-h-screen md:flex items-center justify-center lg:px-20 p-6 bg-[url(../image/hero/hero.jpg)] bg-cover after:content-[''] after:absolute relative after:bg-black/60 after:inset-0">
+                <div className="relative z-10 items-center lg:mr-20">
                     <img
                         src="/image/logo.png"
                         alt="Logo MTs LA TAHZAN"
                         className="w-[400px] mt-10"
                     />
                 </div>
-                <div className="relative flex flex-col bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-5xl border-2 border-secondary p-8">
+                <div className="relative z-10 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-5xl border-2 border-secondary p-8">
                     {/* Judul Tengah Atas */}
                     <h2 className="text-3xl font-bold absolute text-center top-5 left-1/2 transform w-full -translate-x-1/2 bg-white px-4">
                         Pendaftaran Jalur Afirmasi
@@ -116,12 +113,7 @@ export default function PendaftaranJalurAfirmasi() {
                             ))}
                         </div>
                     </div>
-                    <button
-                        className="w-fit px-20 py-2 mx-auto flex md:items-center justify-center font-semibold border border-secondary bg-white text-secondary 
-               rounded-md text-base mt-6
-               transition-all duration-300 ease-in-out 
-               hover:bg-secondary hover:text-white hover:shadow-md"
-                    >
+                    <button className="w-fit px-20 py-2 mx-auto flex md:items-center justify-center font-semibold border border-secondary bg-secondary text-white rounded-md text-base mt-6 transition-all duration-300 ease-in-out hover:bg-secondary/80 hover:shadow-md">
                         Daftar
                     </button>
                 </div>
