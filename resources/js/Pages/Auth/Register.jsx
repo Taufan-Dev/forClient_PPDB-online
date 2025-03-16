@@ -2,8 +2,8 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
-import GuestLayout from "@/Layouts/GuestLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
+import { IconCornerUpLeft } from "@tabler/icons-react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -21,41 +21,58 @@ export default function Register() {
     };
 
     return (
-        <GuestLayout>
+        <div className="min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 md:px-20 ">
             <Head title="Registrasi" />
 
-            <div className="flex items-center justify-between border-2 border-secondary p-4">
-                <Link href="/" className="px-4 py-2 text-red-500 rounded-md">
-                    ← Kembali
+            <div className="absolute top-4 left-1 sm:top-6 sm:left-10">
+                <Link
+                    href="/"
+                    className="px-3 py-2 text-sm sm:text-base text-secondary rounded-md transition-transform duration-300 border border-secondary hover:bg-secondary hover:text-white flex items-center gap-2 flex-wrap w-full sm:w-auto"
+                >
+                    <IconCornerUpLeft
+                        stroke={1}
+                        className="w-4 h-4 sm:w-5 sm:h-5"
+                    />
+                    <span>Kembali</span>
                 </Link>
             </div>
 
-            <div className="flex items-center justify-center min-h-screen px-20">
-                <div className="flex flex-col items-center mr-10">
-                    <h1 className="text-2xl font-bold">MTs LA TAHZAN</h1>
+            <div className="flex flex-col md:flex-row items-center w-full max-w-6xl">
+                {/* Bagian Logo dan Judul */}
+                <div className="flex flex-col items-center md:w-1/2 mt-16 sm:mt-0">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-center">
+                        MTs LA TAHZAN
+                    </h1>
                     <img
                         src="/image/logo.png"
                         alt="Logo MTs LA TAHZAN"
-                        className="w-64 mb-10"
+                        className="w-64 sm:w-80 mt-6"
                     />
                 </div>
 
-                <div className="w-full bg-white p-8 rounded-lg shadow-md border-2 border-gray-300">
+                {/* Form Registrasi */}
+                <div className="w-full md:w-1/2 bg-white p-6 sm:p-8">
                     <form
                         onSubmit={submit}
-                        className="border border-gray-900 p-6 rounded-lg"
+                        className="border-2 border-secondary p-6 rounded-lg"
                     >
-                        {" "}
-                        <h2 className="text-2xl text-center font-bold mb-6 text-gray-800">
+                        <h2 className="text-2xl sm:text-3xl text-center font-bold mb-6 text-gray-800">
                             Registrasi
                         </h2>
+
+                        {/* Input Nama */}
                         <div>
-                            <InputLabel htmlFor="name" value="Nama" />
+                            <InputLabel
+                                htmlFor="name"
+                                value="Nama"
+                                className="text-lg font-semibold"
+                            />
                             <TextInput
                                 id="name"
                                 name="name"
+                                placeholder="Masukan nama calon siswa"
                                 value={data.name}
-                                className="mt-1 block w-full border-gray-300"
+                                className="mt-2 block w-full border-secondary"
                                 onChange={(e) =>
                                     setData("name", e.target.value)
                                 }
@@ -66,20 +83,28 @@ export default function Register() {
                                 className="mt-2"
                             />
                         </div>
+
+                        {/* Input NISN */}
                         <div className="mt-4">
-                            <InputLabel htmlFor="nisn" value="NISN" />
-                            <Link
+                            <InputLabel
+                                htmlFor="nisn"
+                                value="NISN"
+                                className="text-lg font-semibold"
+                            />
+                            <a
                                 href="https://nisn.data.kemdikbud.go.id"
                                 target="_blank"
-                                className="text-blue-500 ml-2"
+                                rel="noopener noreferrer"
+                                className="text-blue-500"
                             >
-                                Cek NISN di Sini
-                            </Link>
+                                Cek NISN disini
+                            </a>
                             <TextInput
                                 id="nisn"
                                 name="nisn"
+                                placeholder="Masukan NISN calon siswa"
                                 value={data.nisn}
-                                className="mt-1 block w-full border-gray-300"
+                                className="mt-1 block w-full border-secondary"
                                 onChange={(e) =>
                                     setData("nisn", e.target.value)
                                 }
@@ -90,14 +115,21 @@ export default function Register() {
                                 className="mt-2"
                             />
                         </div>
+
+                        {/* Input Email */}
                         <div className="mt-4">
-                            <InputLabel htmlFor="email" value="Email" />
+                            <InputLabel
+                                htmlFor="email"
+                                value="Email"
+                                className="text-lg font-semibold"
+                            />
                             <TextInput
                                 id="email"
                                 type="email"
                                 name="email"
+                                placeholder="Masukan email calon siswa"
                                 value={data.email}
-                                className="mt-1 block w-full border-gray-300"
+                                className="mt-2 block w-full border-secondary"
                                 onChange={(e) =>
                                     setData("email", e.target.value)
                                 }
@@ -108,14 +140,21 @@ export default function Register() {
                                 className="mt-2"
                             />
                         </div>
+
+                        {/* Input Password */}
                         <div className="mt-4">
-                            <InputLabel htmlFor="password" value="Password" />
+                            <InputLabel
+                                htmlFor="password"
+                                value="Password"
+                                className="text-lg font-semibold"
+                            />
                             <TextInput
                                 id="password"
                                 type="password"
                                 name="password"
+                                placeholder="Masukan password calon siswa"
                                 value={data.password}
-                                className="mt-1 block w-full border-gray-300"
+                                className="mt-2 block w-full border-secondary"
                                 onChange={(e) =>
                                     setData("password", e.target.value)
                                 }
@@ -126,15 +165,19 @@ export default function Register() {
                                 className="mt-2"
                             />
                         </div>
-                        <div className="mt-6">
+
+                        {/* Tombol Registrasi */}
+                        <div className="mt-6 text-center">
                             <PrimaryButton
-                                className="w-full bg-red-500"
+                                className="w-full sm:w-2/3 bg-secondary mx-auto hover:bg-secondary/90"
                                 disabled={processing}
                             >
                                 Registrasi
                             </PrimaryButton>
                         </div>
-                        <div className="mt-4 text-center">
+
+                        {/* Link ke halaman login */}
+                        <div className="mt-3 text-center">
                             <span>Sudah punya akun? </span>
                             <Link
                                 href={route("login")}
@@ -146,6 +189,6 @@ export default function Register() {
                     </form>
                 </div>
             </div>
-        </GuestLayout>
+        </div>
     );
 }
